@@ -82,6 +82,8 @@ class QuestionsFragment : Fragment() {
         with(binding) {
             val numberOfQuestion = "${index + 1}/${quiz.size}"
             val points = "Счет: $resultPoints"
+            answerRG.clearCheck()
+            counterTV.setTextColor(Color.BLACK)
             questionTV.text = quiz[index].question
             answerOneRB.text = quiz[index].answers[0]
             answerTwoRB.text = quiz[index].answers[1]
